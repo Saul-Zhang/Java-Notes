@@ -145,7 +145,10 @@ spring:
   - @Enumerated：用在枚举类型上
     - EnumeType.STRING：保存枚举类型的实际值，要加@Columm设置非空
     - EnumeType.ORDINAL：枚举类型的索引值，从0开始
-  - @Lob：声明数据库字段为大文本（LONGTEXT），属性类型为字节数组byte[]
+  - @Lob
+    - 数据库字段为大文本（longtext），属性类型用String
+    - 数据库字段为longblob，属性类型用byte[]
+    - 如果不加@Lob，属性类型用byte[]，数据库应该对应tinyblob
   - @Basic(fetch=FetchType.LAZY) ：延迟加载，只有在调用这个属性的getter方法时才把数据加载到内存中，主要是对大文件，需要的时候才加载到内存
   - **@Transient：这个属性不作为持久化字段**
 
