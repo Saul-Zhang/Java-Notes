@@ -1,0 +1,62 @@
+# 使用CODING 对Spring Boot 项目持续集成
+
+## 持续集成
+
+当我们提交了一部分修改完成的代码后，我们总是希望可以快速、持续地得到直观且有效的反馈，以达到我们持续快速交付的目的。持续集成也是敏捷开发的好伙伴，因为在平时的工程中，总有一部分工作是相对机械化，易出错的（例如打包、部署），把这部分工作交给机器来做，我们仅需要轻轻地点一下鼠标，起身泡杯咖啡，将部署发布的事情交由持续集成，便能够轻松地完成工作。
+
+**简而言之：持续集成就是能够采用自动化的手段，解放人的双手，实现项目持续交付的过程。**
+
+CODING（coding.net）是腾讯旗下一个公司的产品，免费提供了持续集成的功能(当然还有其他很多功能)，我自己偶尔会写一些小项目，用这个还是挺爽的，关键是免费，哈哈
+
+## 白嫖开始
+
+持续集成官方也有详细的文档，https://help.coding.net/docs/ci/intro.html，不过这个文档部署一个基于 Node.js + Express + Docker 的应用，我部署的是Java + Spring + Docker应用。可以对照着看
+
+### 注册
+
+首先要去注册一个账号，只用邮箱就可以注册了，可以用我的邀请连接https://e.coding.net/register?invite_register_token=35de7b4c42ff4a12abf5a51bd8d5336f
+
+团队名称提交后是可以改的，域名改不了，其实也没关系，你可以创建多个团队
+
+### 创建项目
+
+![image-20210802174531539](https://gitee.com/SaulZ/img/raw/master/img/image-20210802174531539.png)
+
+选择项目模板，可以选全功能DevOps项目，也可以像我这样按需选，这都无所谓
+
+![image-20210802174615241](https://gitee.com/SaulZ/img/raw/master/img/image-20210802174615241.png)
+
+接下来就是填写项目的基本信息
+
+![image-20210802190126655](https://gitee.com/SaulZ/img/raw/master/img/image-20210802190126655.png)
+
+### 构建计划
+
+计划中会详细配置构建计划的代码源、构建流程、触发规则、环境变量、通知提醒等信息。在后续使用过程当中，按照既定的规则触发该计划，从而实现自动化的流水线构建。
+
+![image-20210802190238104](https://gitee.com/SaulZ/img/raw/master/img/image-20210802190238104.png)
+
+我是Spring Boot 项目选择Java + Spring + Docker
+
+![image-20210802190309251](https://gitee.com/SaulZ/img/raw/master/img/image-20210802190309251.png)
+
+代码仓库，就看我们代码放在哪里了，这个私有项目也是可以访问的
+
+我用的包管理工具是Maven，编译构建这里要改一下
+
+![image-20210803101852219](https://gitee.com/SaulZ/img/raw/master/img/image-20210803101852219.png)
+
+下边这一步是可选的，如果你要把镜像推送到服务器上，可以按他的说明把公钥复制到目标服务器上
+
+![image-20210802190830841](https://gitee.com/SaulZ/img/raw/master/img/image-20210802190830841.png)
+
+最后确认之后就会自动构建，如果我们填了服务器信息，我们的项目直接就可以访问了
+
+如果没有填服务器，可以去制品仓库
+
+![image-20210803151349714](https://gitee.com/SaulZ/img/raw/master/img/image-20210803151349714.png)
+
+去拉取生成的Docker镜像
+
+## 问题总结
+
