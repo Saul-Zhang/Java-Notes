@@ -101,6 +101,4 @@ http {
 ```
 
 - Nginx配置文件的结构
-
-<img src="http://saulimg.zsly.xyz/img/image-20201115193539892.png" alt="image-20201115193539892" style="zoom: 50%;" />
-
+  ![nginx-config](https://img.zhsong.cn/blog-image/nginx-config.png)

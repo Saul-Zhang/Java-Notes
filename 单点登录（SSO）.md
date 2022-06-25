@@ -26,7 +26,7 @@
 
 从这样图应该可以清晰看到整个登录流程
 
-![sso](http://saulimg.zsly.xyz/img/sso.png)
+![sso](https://img.zhsong.cn/blog-image/sso.png)
 
 1. 用户要访问系统a，检验系统a的cookie，cookie不存在，说明用户没登录。则携带系统a的url到sso系统登录，形如`http://hellosso.com:8089/login?returnUrl=http://client1.com:8088`
 2. sso系统验证发现sso系统不是登录状态，那么就在sso系统输入用户名，密码进行登录
@@ -55,11 +55,11 @@ redis中存储的信息：
 
 ### 示例截图
 
-![image-20210308000127431](http://saulimg.zsly.xyz/img/image-20210308000127431.png)
+![sso-ex1](https://img.zhsong.cn/blog-image/sso-ex1.png)
 
-![image-20210308000825251](http://saulimg.zsly.xyz/img/image-20210308000825251.png)
+![sso-ex2](https://img.zhsong.cn/blog-image/sso-ex2.png)
 
-![image-20210308000844529](http://saulimg.zsly.xyz/img/image-20210308000844529.png)
+![sso-ex3](https://img.zhsong.cn/blog-image/sso-ex3.png)
 
 # 参考
 

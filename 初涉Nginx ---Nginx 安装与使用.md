@@ -63,7 +63,7 @@ sudo systemctl reload nginx
 
 Nginx 运行在80端口上，直接访问IP 就可以看到Nginx 的欢迎页，这样就代表安装成功
 
-<img src="http://saulimg.zsly.xyz/img/image-20201113235423418.png" alt="nginx启动页" style="zoom: 80%;" />
+![nginx-welcome](https://img.zhsong.cn/blog-image/nginx-welcome.png)
 
 
 
