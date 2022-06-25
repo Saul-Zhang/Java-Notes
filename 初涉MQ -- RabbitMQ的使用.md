@@ -30,13 +30,13 @@ RabbitMQ Server，服务器实体。
 
 虚拟主机，一个 broker 里可以开设多个 vhost，用作不同用户的权限分离，连接到 RabbitMQ 默认就有一个名为 "/" 的 vhost 可用
 
-![image-20210422164337661](http://saulimg.zsly.xyz/img/image-20210422164337661.png)
+![mq-vhost](https://img.zhsong.cn/blog-image/mq-vhost.png)
 
 ### Exchange
 
 消息队列交换机。**按一定的规则将消息路由转发到某个队列**。
 
-![image-20220124180428797](https://gitee.com/SaulZ/img/raw/master/img/image-20220124180428797.png)
+![mq-default-bindings](https://img.zhsong.cn/blog-image/mq-default-bindings.png)
 
 **所有队列都有一个默认的交换机和路由键，默认的交换机名称是空，路由键跟队列同名**
 
@@ -144,9 +144,9 @@ public class RabbitMQConsumer {
 }
 ```
 
-![image-20210422165416975](http://saulimg.zsly.xyz/img/image-20210422165416975.png)
+![mq-request1](https://img.zhsong.cn/blog-image/mq-request1.png)
 
-![image-20210422165435272](https://gitee.com/SaulZ/img/raw/master/img/image-20210422165435272.png)
+![mq-result1](https://img.zhsong.cn/blog-image/mq-result1.png)
 
 #### Fanout exchange
 
@@ -219,9 +219,9 @@ public class FanoutRabbitConfig {
 
 
 
-![image-20210422172349440](http://saulimg.zsly.xyz/img/image-20210422172349440.png)
+![mq-request2](https://img.zhsong.cn/blog-image/mq-request2.png)
 
-![image-20210422172324654](https://gitee.com/SaulZ/img/raw/master/img/image-20210422172324654.png)
+![mq-result2](https://img.zhsong.cn/blog-image/mq-result2.png)
 
 #### Topic Exchange
 
@@ -317,13 +317,13 @@ public class TopicRabbitConfig {
 
 
 
-![image-20210422163106677](http://saulimg.zsly.xyz/img/image-20210422163106677.png)
+![mq-request3](https://img.zhsong.cn/blog-image/mq-request3.png)
 
-![image-20210422163127623](https://gitee.com/SaulZ/img/raw/master/img/image-20210422163127623.png)
+![mq-result3](https://img.zhsong.cn/blog-image/mq-result3.png)
 
-![image-20210422165527326](http://saulimg.zsly.xyz/img/image-20210422165527326.png)
+![mq-request4](https://img.zhsong.cn/blog-image/mq-request4.png)
 
-![image-20210422165544157](https://gitee.com/SaulZ/img/raw/master/img/image-20210422165544157.png)
+![mq-result4](https://img.zhsong.cn/blog-image/mq-result4.png)
 
 #### Headers Exchange
 
@@ -427,9 +427,9 @@ public class HeadersExchangeConsumer {
 
 
 
-![image-20210422175526148](http://saulimg.zsly.xyz/img/image-20210422175526148.png)
+![mq-request6](https://img.zhsong.cn/blog-image/mq-request6.png)
 
-![image-20210422180102839](https://gitee.com/SaulZ/img/raw/master/img/image-20210422180102839.png)
+![mq-result6](https://img.zhsong.cn/blog-image/mq-result6.png)
 
 ### Routing key
 
