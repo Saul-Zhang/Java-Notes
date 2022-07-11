@@ -4,7 +4,7 @@
 
 进入redis的官网https://redis.io/
 
-![redis-website](https://img.zhsong.cn/blog-image/redis-website.png)
+![redis官网](http://saulimg.zsly.xyz/img/image-20201213144443289.png)
 
 点击直接可以下载，在windows和linux都能使用。本文主要介绍在linux上的使用
 
@@ -87,7 +87,7 @@ make install
 src/resdis-server
 ```
 
-![redis-start](https://img.zhsong.cn/blog-image/redis-start.png)
+![image-20201213161124947](http://saulimg.zsly.xyz/img/image-20201213161124947.png)
 
 然后再开一个窗口打开客户端
 
@@ -95,7 +95,7 @@ src/resdis-server
 src/redis-cli
 ```
 
-![redis-cli](https://img.zhsong.cn/blog-image/redis-cli.png)
+![image-20201213161458325](http://saulimg.zsly.xyz/img/image-20201213161458325.png)
 
 这样就OK了
 
@@ -163,7 +163,7 @@ cp utils/redis_init_script /etc/init.d
 
   打开客户端
 
-  ![redis-cli1](https://img.zhsong.cn/blog-image/redis-cli1.png)
+  ![image-20201213211109403](http://saulimg.zsly.xyz/img/image-20201213211109403.png)
 
   
 
@@ -185,7 +185,7 @@ set name zs
 
 在输入set的时候，客户端会给出提示
 
-![redis-hint](https://img.zhsong.cn/blog-image/redis-hint.png)
+![image-20201213214907500](http://saulimg.zsly.xyz/img/image-20201213214907500.png)
 
 ```
 set key value [ex] [px] [nx|xx]

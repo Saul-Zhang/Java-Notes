@@ -33,7 +33,7 @@ redis-sentinel sentinel.conf #要指定配置文件的位置
 
 使用`ps -ef | grep redis`
 
-![redis-ps](https://img.zhsong.cn/blog-image/redis-ps.png)
+![image-20201219211213381](http://saulimg.zsly.xyz/img/image-20201219211213381.png)
 
 这样哨兵就启动成功了，如果不成功去看一下前面配的日志`/usr/local/redis/sentinel/redis-sentinel.log`。
 
