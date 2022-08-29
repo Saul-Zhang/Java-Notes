@@ -1,5 +1,3 @@
-
-
 # OAuth2中的token处理源码解析
 
 ### TokenEndPoint
@@ -8,7 +6,7 @@
 
 ### 1.1请求/oauth/token
 
-![image-20210526165251667](https://gitee.com/SaulZ/img/raw/master/img/image-20210526165251667.png)
+![获取token](https://img.zhsong.cn/blog-image/%E8%8E%B7%E5%8F%96token.png)
 
 ### 1.2过滤器AbstractAuthenticationProcessingFilter
 
