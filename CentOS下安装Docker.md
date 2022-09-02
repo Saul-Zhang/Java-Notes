@@ -32,7 +32,7 @@ sudo yum install docker-ce-20.10.9 docker-ce-cli-20.10.9 containerd.io docker-co
 ```
 
 ```shell
-docker run -d -e TZ="Asia/Shanghai" -e MYSQL_USER="jmlx" -e MYSQL_ROOT_PASSWORD="-bk,9tI4N5)@ADZ" --name mysql -p 3306:3306 mysql --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+docker run -d -e TZ="Asia/Shanghai" -e MYSQL_ROOT_PASSWORD="-bk,9tI4N5)@ADZ" --name mysql -p 3306:3306 mysql --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
 ```
 
 
