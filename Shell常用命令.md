@@ -3,8 +3,8 @@
 # 2>&1
 
 - 这里1，2都是文件描述符
-- `1`表示标准输出(stdout)
-- `2`表示标准错误(stderr)
+- `1`表示标准输出(stdout)，比如Java中System.out
+- `2`表示标准错误(stderr)，比如Java中System.err
 - `>`表示重定向，`echo hello > 1.txt` 表示将"hello"写入到1.txt中
 - `>>`也是重定向，它会将内容**追加**到文件中，而不是直接覆盖
 - `&`可以看作是转义字符，因为如果直接写`2>1`表示将标准错误写到文件名为1的文件中了
@@ -15,9 +15,16 @@
 nohup python main.py > my.log 2>&1 &
 ```
 
+- nohup 表示将程序以忽略挂起信号的方式运行起来，就算退出ssh连接，命令仍然正常执行
+
+- 最后一个&表示将命令放到后台执行
+- python main.py > my.log 是把标准输出写到my.log文件中，2>&1是指把标准错误写到标准输出中，这样就相当于标准错误也写到my.log文件中了。注意2>&1一定是写在python main.py > my.log后面的
+
+参考 https://blog.csdn.net/zhaominpro/article/details/82630528
+
 # /dev/null
 
-
+`/dev/null` 是一个特殊的设备文件，它丢弃一切写入其中的数据 可以将它视为一个黑洞, 它等效于只写文件, **写入其中的所有内容都会消失, 尝试从中读取或输出不会有任何结果**
 
 # 磁盘相关
 
@@ -99,11 +106,20 @@ find . -name "*.log" -mtime -10 -exec  rm -rfv {} \; # 删除当前目录下10�
 find . -type f -mtime +30 -name "*.log" -exec cp {} old \; #将30天前的.log文件移动到old目录中
 ```
 
+- type 文件类型
+  - f 普通文件
+  - d 目录
+  - l 符号连接
+
+```shell
+find . -type f-size +50M -exec rm {} \; # 删除当前目录下大于50M的文件
+```
 
 
 
+## 参考
 
-
+强烈推荐Linun命令搜索☞https://wangchujiang.com/linux-command/list.html
 
 
 
